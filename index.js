@@ -46,7 +46,7 @@ const server = http.createServer((req, res) =>
       {
         const qs = require('querystring');  //name=吉村&yaki-shabu=しゃぶしゃぶのような文字列をパースする
         const decoded = decodeURIComponent(rawData);
-        console.info('[' + now + '] 投稿: ' + decoded);
+        console.info(' 投稿: ' + decoded);
         const answer = qs.parse(decoded);
         res.write('<!DOCTYPE html><html lang="ja"><body><h1>' +
           answer['name'] + 'さんは' + answer['favorite'] +
